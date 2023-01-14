@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% block page_title %}
+    Detail Post Of {{ post.author }}
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="card shadow p-5 m-3">
+            <h1 class="text-center">Do You Want To Delete <span class="text-info">{{ post.title }}</span> Post ?!</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input class="btn btn-danger w-100 mt-3" type="submit" value="YES DELETE">
+            </form>
+        </div>
+    </div>
+{% endblock content %}
